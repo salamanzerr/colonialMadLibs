@@ -7,5 +7,6 @@ body{
 }
 form{
   background-color: grey;
-  text-align: center
+  text-align: center;
+  border-radius: 25px;
 }
