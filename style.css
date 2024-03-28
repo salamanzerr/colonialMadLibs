@@ -1,0 +1,11 @@
+/* temp style code */
+
+body{
+  background-color: white;
+  display: flex nowrap;
+  text-align: center;
+}
+form{
+  background-color: grey;
+  text-align: center
+}
