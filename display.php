@@ -14,7 +14,7 @@
   </head>
 
   <body>
-        <footer>Copyright &copy; 2024 Alec Manzer, Sam Zito, etc.</footer>
+        <footer>Copyright &copy; 2024 Alec Manzer, Sam Zito, Fernando Moran etc.</footer>
   </body>
 
   
