@@ -14,7 +14,7 @@
   </head>
 
   <body>
-        <footer>Copyright &copy; 2024 Alec Manzer, etc.Sam</footer>
+        <footer>Copyright &copy; 2024 Alec Manzer, etc.</footer>
   </body>
 
   
