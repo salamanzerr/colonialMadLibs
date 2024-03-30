@@ -1,6 +1,7 @@
 <?php
 // pull words from user forms
 // output within the story
+   $noun1 = $_POST['noun1'];
 ?>
 
 <!DOCTYPE html>
