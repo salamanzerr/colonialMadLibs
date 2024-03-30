@@ -15,7 +15,7 @@
   </head>
 
   <body>
-        <footer>Copyright &copy; 2024 Alec Manzer, Sam Zito, Fernando Moran etc.</footer>
+        <footer>&copy; Copyright 2024 Alec Manzer, Sam Zito, Fernando Moran, Janine Beall, Kennedy Greene</footer>
   </body>
 
   
