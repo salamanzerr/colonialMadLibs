@@ -1,21 +1,26 @@
-/* temp style code */
 /* Font */
 @font-face {
   font-family: WeThePeople;
   src: url(WeThePeople.ttf);
 }
+
+/* Body and Header */
 body{
   background-color: white;
   text-align: center;
   background-image: url('backgroundPaper.jpg');
 }
-.center-div {
-  margin: 0 auto;
-}
 h2{
   font-family: 'WeThePeople';
   font-size: 100px;
 }
+
+/* Centers Everything */
+.center-div {
+  margin: 0 auto;
+}
+
+/* Flex Box containing Form */
 .container{
   display: flex;
   flex-direction: row;
@@ -35,16 +40,24 @@ form{
   text-align: center;
   border-radius: 25px;
 }
+/* End Flex Box */
+
+/* Button ID */
 #button{
   padding-top: 1vh;
 }
 #button input{
   font-size: x-large;
   background-color: bisque;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+#button input:hover{
+  background-color: #b6a28a;
+}
+/* End Button */
 
-
-/* Tags only in PHP */
+/* Tags used only in PHP */
 audio {
   border: 0;
   background-color: 0;
@@ -54,5 +67,5 @@ audio {
   opacity: 25%;
   height: 130vh;
   top: 2%;
-  left: 3%;
+  left: 2%;
 }
