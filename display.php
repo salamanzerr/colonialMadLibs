@@ -25,34 +25,47 @@
 <!-- start of html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Colonial Mad Libs</title>
-  </head>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="Resources/style.css">
+   <title>Colonial Mad Libs</title>
+</head>
 
-  <body>
-    <h1>The Story</h1>
-<!-- start of PHP -->
+<body>
+   <audio autoplay>
+      <source src="./Resources/YankeeDoodle.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+   </audio>
+
+   <div id="flag">
+      <img src="./Resources/americanFlag.gif" alt="flag">
+   </div>
+
+   <h2>The Story</h2>
+   
+    <!-- start of PHP -->
     <?php
-   // pulling words from HTML forms
+
+      // pulling words from HTML forms
       if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $noun = $_POST['noun1'];
+         $noun = $_POST['noun1'];
 
-     // variable to hold the full story including variables; could make more if we want more options 
-        $story = "Own a $noun1 for home defense, since that's what the founding fathers intended...";
+      // variable to hold the full story including variables; could make more if we want more options 
+      $story = "Own a $noun1 for home defense, since that's what the founding fathers intended...";
 
-     // display story on page
-        echo "<p>Story: $story</p>";
+      // display story on page
+      echo "<p>Story: $story</p>";
       } 
-   // make sure the page won't try to process form data until it is submitted
+   
+      // make sure the page won't try to process form data until it is submitted
       else {
         echo "<p>No data submitted</p>";
       }
       ?>
+
       <footer>&copy; Copyright 2024 Alec Manzer, Sam Zito, Fernando Moran, Janine Beall, Kennedy Greene</footer>
-  </body>
-  </html>
+</body>
+</html>
 
   

@@ -1,12 +1,58 @@
 /* temp style code */
-
+/* Font */
+@font-face {
+  font-family: WeThePeople;
+  src: url(WeThePeople.ttf);
+}
 body{
   background-color: white;
-  display: flex nowrap;
   text-align: center;
+  background-image: url('backgroundPaper.jpg');
+}
+.center-div {
+  margin: 0 auto;
+}
+h2{
+  font-family: 'WeThePeople';
+  font-size: 100px;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  font-size: xx-large;
+  text-align: center;
+  justify-content: center;
+}
+label {
+  padding-bottom: 10vh;
+  padding: 0 2vh 0 2vh;
+}
+input {
+  background-color: bisque;
+  font-size: large;
 }
 form{
-  background-color: grey;
   text-align: center;
   border-radius: 25px;
+}
+#button{
+  padding-top: 1vh;
+}
+#button input{
+  font-size: x-large;
+  background-color: bisque;
+}
+
+
+/* Tags only in PHP */
+audio {
+  border: 0;
+  background-color: 0;
+}
+#flag img{
+  position: absolute;
+  opacity: 25%;
+  height: 130vh;
+  top: 2%;
+  left: 3%;
 }
