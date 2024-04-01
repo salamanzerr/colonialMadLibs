@@ -2,6 +2,24 @@
 <?php
 // pull words from user forms
    $noun1 = $_POST['noun1'];
+   $noun2 = $_POST['noun2'];
+   $noun3 = $_POST['noun3'];
+   $noun4 = $_POST['noun4'];
+   $noun5 = $_POST['noun5'];
+   $noun6 = $_POST['noun6'];
+   $person = $_POST['person'];
+   $object = $_POST['object'];
+   $adjectivee = $_POST['adjective'];
+   $pet = $_POST['pet'];
+   $battlecry = $_POST['battlecry'];
+   $weapon = $_POST['weapon'];
+   $verb = $_POST['verb'];
+   $emotion = $_POST['emotion'];
+
+
+
+
+
 ?>
 
 <!-- start of html -->
