@@ -68,6 +68,7 @@ audio {
   height: 130vh;
   top: 2%;
   left: 2%;
+  width: 100%;
 }
 .main {
   font-size: xx-large;
