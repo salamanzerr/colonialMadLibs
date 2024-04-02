@@ -1,20 +1,55 @@
-<!-- not sure if this block will be needed or not anymore -->
 <?php
 // pull words from user forms
-   $noun1 = $_POST['noun1'];
-   $noun2 = $_POST['noun2'];
-   $noun3 = $_POST['noun3'];
-   $noun4 = $_POST['noun4'];
-   $noun5 = $_POST['noun5'];
-   $noun6 = $_POST['noun6'];
-   $person = $_POST['person'];
-   $object = $_POST['object'];
-   $adjective = $_POST['adjective'];
-   $pet = $_POST['pet'];
-   $battleCry = $_POST['battleCry'];
-   $weapon = $_POST['weapon'];
-   $verb = $_POST['verb'];
-   $emotion = $_POST['emotion'];
+// Check if form is submitted
+// Initialize variables
+$noun1 = $noun2 = $noun3 = $noun4 = $noun5 = $noun6 = $person = $object = $adjective = $pet = $battlecry = $weapon = $verb = $emotion = '';
+
+// Function to validate input
+function validateInput($input, $default) {
+    // Trim whitespace from the input
+    $input = trim($input);
+    // Check if the input is not empty
+    if (!empty($input)) {
+        // If input is valid, return the sanitized value
+        return htmlspecialchars($input);
+    } else {
+        // If input is empty, return the default value
+        return $default;
+    }
+}
+
+// Set default values for each input field
+$defaults = array(
+    'noun1' => 'musket',
+    'noun2' => 'powdered wig',
+    'noun3' => 'rifle',
+    'noun4' => 'pistol',
+    'noun5' => 'cannon',
+    'noun6' => 'triangular bayonet',
+    'person' => 'devil',
+    'object' => 'golf ball',
+    'adjective' => 'dead',
+    'pet' => 'dog',
+    'battleCry' => 'Tally ho lads',
+    'weapon' => 'bayonet',
+    'verb' => 'Bleeds',
+    'emotion' => 'terrified'
+);
+
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve form data and sanitize
+    foreach ($_POST as $key => $value) {
+        // Validate input and set default value based on $defaults array
+        $$key = validateInput($value, $defaults[$key]);
+    }
+} else {
+    // Set default values if form is not submitted
+    foreach ($defaults as $key => $value) {
+        $$key = $value;
+    }
+}
+
 ?>
 
 <!-- start of html -->
@@ -25,6 +60,16 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="Resources/style.css">
    <title>Colonial Mad Libs</title>
+
+   <style>
+
+   p{
+      color: black;
+      font-size: 1.5em;
+   }
+
+   </style>
+
 </head>
 
 <body>
@@ -43,34 +88,24 @@
 
       <!-- start of PHP -->
       <?php
-
-         // pulling words from HTML forms
-         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-         $noun = $_POST['noun1'];
-
          // variable to hold the full story including variables; could make more if we want more options 
-         $story = "Own a $noun1 for home defense, since that's what the 
+         $story = "Own a <strong>$noun1</strong> for home defense, since that's what the 
                founding fathers intended. Four ruffians break into my 
-               house. \"What the $person?\" As I grab my $noun2 and Kentucky 
-               $noun3. Blow a $object sized hole through the first man, 
-               he's $adjective on the spot. Draw my $noun4 on the second 
+               house. \"What the <strong>$person</strong>?\" As I grab my <strong>$noun2</strong> and Kentucky 
+               <strong>$noun3</strong>. Blow a <strong>$object</strong> sized hole through the first man, 
+               he's <strong>$adjective</strong> on the spot. Draw my <strong>$noun4</strong> on the second 
                man, miss him entirely because it's smoothbore and nails the 
-               neighbors $pet. I have to resort to the $noun5 mounted at the 
-               top of the stairs loaded with grape shot, \"$battleCry\"! 
+               neighbors <strong>$pet</strong>. I have to resort to the <strong>$noun5</strong> mounted at the 
+               top of the stairs loaded with grape shot, \"<strong>$battleCry</strong>\"! 
                The grape shot shreds two men in the blast, the sound and 
-               extra shrapnel set off car alarms. Fix $weapon and charge the 
-               last $emotion rapscallion. He $verb waiting on the police 
-               to arrive since $noun6 wounds are impossible to stitch up. 
+               extra shrapnel set off car alarms. Fix <strong>$weapon</strong> and charge the 
+               last <strong>$emotion</strong> rapscallion. He <strong>$verb</strong> waiting on the police 
+               to arrive since <strong>$noun6</strong> wounds are impossible to stitch up. 
                Just as the founding fathers intended.";
 
          // display story on page
          echo "<p>$story</p>";
-         } 
    
-         // make sure the page won't try to process form data until it is submitted
-         else {
-            echo "<p>No data submitted</p>";
-         }
       ?>
    </div>
 
@@ -80,5 +115,3 @@
    </footer>
 </body>
 </html>
-
-  
